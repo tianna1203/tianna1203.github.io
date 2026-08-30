@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="薛天楽（XUE TIANLE）— 舞台監督・制作。演劇の中に〈リアル〉の在り処を探す、実践と研究のポートフォリオ。"
+  />
+  <title>薛天楽 XUE TIANLE｜舞台監督・制作</title>
+
+  <!-- JS 有効時のみ .reveal を隠す（JS 無効でも全内容が読める） -->
+  <script>
+    document.documentElement.className = "js";
+  </script>
+
+  <!-- 日本語ウェイトを含む Noto ファミリー（読み込めない場合はシステムフォントにフォールバック） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!--
+  ページ構成
+  ├─ header  … 固定ナビゲーション
+  ├─ #home   … ヒーロー（自己紹介 + スローガン + 主視覚）
+  ├─ #skills … 技能タグ（Pill）
+  ├─ #work   … プロジェクト（演劇実践 / 研究論文 をフィルタ表示）
+  ├─ #about  … 経歴・活動拠点・興味
+  ├─ #contact… 連絡先 + フォーム
+  └─ footer
+  詳細モーダル / ライトボックスは body 末尾に配置し、JS で内容を注入する。
+-->
+
+<!-- ============ ナビゲーション ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-logo" aria-label="ホームへ">薛天楽<span>XUE&nbsp;TIANLE</span></a>
+
+    <nav class="nav" id="primaryNav" aria-label="メインナビゲーション">
+      <a href="#keywords">研究キーワード</a>
+      <a href="#work">プロジェクト</a>
+      <a href="#about">概要</a>
+      <a href="#contact">連絡先</a>
+    </nav>
+
+    <button
+      class="nav-toggle"
+      id="navToggle"
+      aria-expanded="false"
+      aria-controls="primaryNav"
+      aria-label="メニューを開閉">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ ヒーロー ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-head">
+        <p class="eyebrow reveal">研究 ／ 実践 ・ RESEARCH / PRACTICE</p>
+        <h1 class="hero-title reveal">
+          演劇の中に、<br /><em>〈リアル〉</em>の<br />在り処を探す。
+        </h1>
+      </div>
+
+      <div class="hero-body">
+        <div class="hero-lead reveal">
+          <p class="hero-lead-name">薛天楽（XUE&nbsp;TIANLE）<br />中国・江蘇省出身</p>
+          <p>
+            2023年学部2年次より演劇活動を始め、理論と実践の融合を目指してきました。
+            人と共に劇場で作品をつくることを大切にし、現在は主に舞台監督／制作として活動しながら、
+            自身の創作と研究の道を模索しています。
+          </p>
+        </div>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary">プロジェクトを見る</a>
+          <a href="#contact" class="btn btn-ghost">連絡する</a>
+        </div>
+        <dl class="hero-facts reveal">
+          <div><dt>拠点 / BASE</dt><dd>2021–2025/6 中国・南京<br />2025/7– 日本・神戸〜東京</dd></div>
+          <div><dt>所属 / AFFILIATION</dt><dd>東京大学大学院 総合文化研究科 表象文化研究コース（外国人研究生）</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-portrait">
+          <img
+            src="assets/profile/portrait.jpg"
+            alt="薛天楽"
+            width="400" height="400" loading="eager" />
+        </div>
+        <p class="hero-caption">東京大学大学院 総合文化研究科<br />表象文化研究コース研究生</p>
+      </div>
+    </div>
+    <a href="#keywords" class="scroll-cue" aria-hidden="true">SCROLL</a>
+  </section>
+
+  <!-- ============ 研究キーワード ============ -->
+  <section class="section" id="keywords">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="section-index">01</p>
+        <h2 class="section-title">研究キーワード</h2>
+        <p class="section-sub">
+          現代演劇と小劇場演劇を軸に、身体・ポップカルチャー・虚構と現実の関係を横断的に考えています。
+          実践と並走するかたちで書いてきた論文のテーマでもあります。
+        </p>
+      </header>
+
+      <div class="pill-group reveal" aria-label="研究キーワード">
+        <span class="pill">現代演劇</span>
+        <span class="pill">小劇場演劇</span>
+        <span class="pill">身体・身体表現</span>
+        <span class="pill">ポップカルチャー</span>
+        <span class="pill">虚構と現実</span>
+        <span class="pill">デバイジング・シアター</span>
+        <span class="pill">岡田利規</span>
+        <span class="pill">「超現実」美学</span>
+        <span class="pill">儀式性</span>
+        <span class="pill">再知覚</span>
+        <span class="pill">異化効果</span>
+        <span class="pill">VTuber・アバター</span>
+        <span class="pill">具身的現前</span>
+        <span class="pill">知覚現象学</span>
+        <span class="pill">計量映画学（シネメトリクス）</span>
+        <span class="pill">ドキュメンタリー・エッセイ映画</span>
+      </div>
+
+      <div class="reveal" style="margin-top: 3.5rem">
+        <p class="pill-caption">現場での役割 / ROLES</p>
+        <div class="pill-group pill-group--muted">
+          <span class="pill pill--outline">舞台監督</span>
+          <span class="pill pill--outline">制作 / プロデュース</span>
+          <span class="pill pill--outline">演出助手</span>
+          <span class="pill pill--outline">進行・予算管理</span>
+          <span class="pill pill--outline">グラフィックデザイン</span>
+          <span class="pill pill--outline">宣伝美術・ポスター</span>
+          <span class="pill pill--outline">記録写真</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ プロジェクト ============ -->
+  <section class="section section--alt" id="work">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="section-index">02</p>
+        <h2 class="section-title">プロジェクト</h2>
+        <p class="section-sub">
+          2023年から2024年にかけて、南京大学ブラックボックスシアターを中心に関わった舞台作品と、
+          それと並走してきた研究・論文です。
+        </p>
+      </header>
+
+      <div class="filter-bar reveal" role="tablist" aria-label="プロジェクトの絞り込み">
+        <button class="filter is-active" role="tab" aria-selected="true" data-filter="all">すべて</button>
+        <button class="filter" role="tab" aria-selected="false" data-filter="stage">演劇実践</button>
+        <button class="filter" role="tab" aria-selected="false" data-filter="research">研究論文</button>
+      </div>
+
+      <div class="work-grid" id="workGrid">
+        <!-- 演劇実践 -->
+        <article class="card reveal" data-category="stage" data-project="peergynt">
+          <div class="card-media">
+            <img src="assets/peergynt/still-1.png" alt="『ペール・ギュント――豚の幻想曲』舞台写真" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-meta">2024 ・ プロデューサー／グラフィックデザイン</p>
+            <h3 class="card-title">ペール・ギュント――豚の幻想曲<br /><span class="card-title-en">Peer Gynt — Fantasia of a Pig</span></h3>
+            <p class="card-desc">第15回国際イプセン会議 上演作品。資金・進行・チーム編成をゼロから統括した、初めての本格的プロデュース。</p>
+            <button class="card-link" data-open="peergynt">詳細を見る<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="stage" data-project="tomorrow">
+          <div class="card-media">
+            <img src="assets/tomorrow/still-1.jpg" alt="『明日事務所』舞台写真" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-meta">2023–2024 ・ 演出助手／舞台監督／グラフィックデザイン</p>
+            <h3 class="card-title">明日事務所<br /><span class="card-title-en">Tomorrow Office</span></h3>
+            <p class="card-desc">45〜72歳の女性6名へのインタビューから立ち上げたドキュメンタリー演劇。宣伝美術と稽古の記録も担当。</p>
+            <button class="card-link" data-open="tomorrow">詳細を見る<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="stage" data-project="pinocchio">
+          <div class="card-media">
+            <img src="assets/pinocchio/still-1.jpg" alt="『ピノキオ・ゲーム』舞台写真" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-meta">2023 ・ 舞台監督</p>
+            <h3 class="card-title">ピノキオ・ゲーム<br /><span class="card-title-en">Pinocchio Game</span></h3>
+            <p class="card-desc">出稼ぎ労働者家庭の子どもたちと5か月かけてつくった、南京大学コミュニティ実験劇場 第2期プロジェクト。</p>
+            <button class="card-link" data-open="pinocchio">詳細を見る<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="stage" data-project="feather">
+          <div class="card-media">
+            <img src="assets/feather/still-1.jpg" alt="『羽根』舞台写真" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-meta">2023 ・ 制作</p>
+            <h3 class="card-title">羽根<br /><span class="card-title-en">Feather</span></h3>
+            <p class="card-desc">コロナ禍の教室で行われた「未遂の講演会」。デバイジングの手法で俳優自身の経験から構成した上演。</p>
+            <button class="card-link" data-open="feather">詳細を見る<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="stage" data-project="utopia">
+          <div class="card-media">
+            <img src="assets/utopia/still-1.png" alt="『子虚先生の理想郷』舞台写真" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-meta">2023 ・ プロデューサー助手</p>
+            <h3 class="card-title">子虚先生の理想郷<br /><span class="card-title-en">Mister Non-existence in Utopia</span></h3>
+            <p class="card-desc">初めて演劇実践に加わった作品。Aranya演劇祭にも招聘。ここから私の劇場生活が始まった。</p>
+            <button class="card-link" data-open="utopia">詳細を見る<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <!-- 研究論文 -->
+        <article class="card card--paper reveal" data-category="research" data-project="paper-premium">
+          <div class="card-body">
+            <p class="card-meta">論文 ・ 原文：中国語</p>
+            <h3 class="card-title">『スーパープレミアムソフトＷバニラリッチ』における儀式性美学に関する考察</h3>
+            <p class="card-desc">岡田利規『スーパープレミアムソフトWバニラリッチ』を対象に、身体動作とバッハ平均律が生む「儀式性」を分析。</p>
+            <button class="card-link" data-open="paper-premium">要旨を読む<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card card--paper reveal" data-category="research" data-project="paper-real">
+          <div class="card-body">
+            <p class="card-meta">論文 ・ 原文：中国語</p>
+            <h3 class="card-title">「リアル」の再知覚<br />――岡田利規演劇作品における「超現実」美学</h3>
+            <p class="card-desc">言語戦略と歪んだ身体表現から、現実と虚構の境界を曖昧にする岡田利規の「超現実」美学を読み解く。</p>
+            <button class="card-link" data-open="paper-real">要旨を読む<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card card--paper reveal" data-category="research" data-project="paper-vtuber">
+          <div class="card-body">
+            <p class="card-meta">論文 ・ 原文：中国語</p>
+            <h3 class="card-title">物質的隔たりを越える身体<br />――「アバター」の視点から見るVTuber</h3>
+            <p class="card-desc">メルロ゠ポンティの身体理論を援用し、VTuberを三層に分解して「化身」の二重機能を考察。</p>
+            <button class="card-link" data-open="paper-vtuber">要旨を読む<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="card card--paper reveal" data-category="research" data-project="paper-cinemetrics">
+          <div class="card-body">
+            <p class="card-meta">論文 ・ 原文：中国語</p>
+            <h3 class="card-title">シネメトリクスの視点から見るクリス・マルケルの「ドキュメンタリー・エッセイ」的映画スタイル</h3>
+            <p class="card-desc">計量映画学の指標を用い、編集率と長回しの組み合わせが虚構と非虚構を往還する映像時空を論じる。</p>
+            <button class="card-link" data-open="paper-cinemetrics">要旨を読む<span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 概要 ============ -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <header class="section-head reveal">
+        <p class="section-index">03</p>
+        <h2 class="section-title">概要</h2>
+      </header>
+
+      <div class="about-body">
+        <p class="about-lead reveal">
+          理論と実践の融合を目指し、演劇芸術の中で「リアル」の在り処を探っている。
+          自身の未熟さに真摯に向き合いながら、挑戦と学びを重ねている。
+        </p>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <span class="timeline-year">2021–2025</span>
+            <div>
+              <h3>南京大学 文学院</h3>
+              <p>演劇映画芸術専攻（学部）。中国・南京を拠点に活動。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2023–</span>
+            <div>
+              <h3>演劇活動をはじめる</h3>
+              <p>学部2年次より座組に参加。プロデューサー助手・制作・舞台監督・演出助手・プロデューサーと役割を広げる。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2025/7–</span>
+            <div>
+              <h3>東京大学大学院 総合文化研究科</h3>
+              <p>表象文化研究コース 外国人研究生。日本を拠点に、創作と研究を続ける。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-interests reveal">
+          <h3>関心のあること</h3>
+          <p>
+            現代演劇と小劇場演劇、身体、ポップカルチャー、そして虚構と現実の関係。
+            理論と実践のあいだを往復することが、いまのテーマです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 連絡先 ============ -->
+  <section class="section section--alt" id="contact">
+    <div class="container contact-grid">
+      <header class="section-head reveal">
+        <p class="section-index">04</p>
+        <h2 class="section-title">連絡先</h2>
+        <p class="section-sub">
+          上演の制作・舞台監督、宣伝美術、共同研究のご相談など、お気軽にどうぞ。
+        </p>
+      </header>
+
+      <div class="contact-cols">
+        <div class="contact-direct reveal">
+          <a class="contact-line" href="mailto:xtl20021203@gmail.com">
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-value">xtl20021203@gmail.com</span>
+          </a>
+          <div class="contact-line">
+            <span class="contact-label">BASE</span>
+            <span class="contact-value">東京, 日本</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-label">LANG</span>
+            <span class="contact-value">中文 ・ 日本語 ・ English</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">お名前</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required />
+            <span class="field-error" data-for="cf-name"></span>
+          </div>
+          <div class="field">
+            <label for="cf-email">メールアドレス</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required />
+            <span class="field-error" data-for="cf-email"></span>
+          </div>
+          <div class="field">
+            <label for="cf-message">メッセージ</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+            <span class="field-error" data-for="cf-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">メールを作成する</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite">
+            送信ボタンを押すと、入力内容を本文にしたメールがご利用のメールソフトで開きます。
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-name">薛天楽 ・ XUE TIANLE</p>
+    <p class="footer-copy">© <span id="year">2026</span> XUE TIANLE. 演劇の中に〈リアル〉の在り処を探す。</p>
+    <a href="#home" class="footer-top">ページ上部へ ↑</a>
+  </div>
+</footer>
+
+<!-- ============ プロジェクト詳細モーダル ============ -->
+<div class="modal" id="projectModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalContent">
+    <button class="modal-close" data-close aria-label="閉じる">×</button>
+    <div class="modal-content" id="modalContent"><!-- JS が注入 --></div>
+  </div>
+</div>
+
+<!-- ============ 画像ライトボックス ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" data-lb-close aria-label="閉じる">×</button>
+  <button class="lightbox-nav lightbox-prev" data-lb-prev aria-label="前の画像">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" data-lb-next aria-label="次の画像">›</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
